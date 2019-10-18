@@ -1,7 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   var Neighborhood = sequelize.define("Neighborhood", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+    neighborhood: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+    }
   });
   Neighborhood.associate = function(models) {
     // Associating Neighborhood with Posts

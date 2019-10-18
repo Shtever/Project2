@@ -13,11 +13,20 @@ module.exports = function(app) {
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
+  // Load treat page and pass in an example by id
+  app.get("/treat/:id", function(req, res) {
     db.Treat.findOne({ where: { id: req.params.id } }).then(function(dbTreat) {
       res.render("treat", {
-        example: dbTreat
+        treat: dbTreat
+      });
+    });
+  });
+
+  // Load Neigbhborhood page and pass in an example by id
+  app.get("/neighborhood/:id", function(req, res) {
+    db.Neighborhood.findOne({ where: { id: req.params.id } }).then(function(dbNeighbor) {
+      res.render("neighborhood", {
+        neighborhood: dbNeighbor
       });
     });
   });

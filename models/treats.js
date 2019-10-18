@@ -1,7 +1,22 @@
 module.exports = function(sequelize, DataTypes) {
   var Treat = sequelize.define("Treat", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+    candy: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+    },
+    neighborhood: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+    }
   });
 
   Treat.associate = function(models) {
