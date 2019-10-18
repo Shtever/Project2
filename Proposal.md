@@ -7,8 +7,10 @@
 - Steve McMillen
 
 ## Sketch of design ##
+
 ### Home Page ###
 ![Image description](/Sketches/Site1.jpg)
+
 
 
 
@@ -34,13 +36,14 @@
      
 
 ### I am giving out candy. ###
+     
+     
 - displays neighborhood map
 - displays an input box where user can enter the candy they will be giving out on Halloween.
 - renders user input to page
 
 
 ![Image description](/Sketches/Site2.jpg)
-
 
 
 ### The user can then view the candy tht will be given out in their neighborhood, and can plan their trick or treat routes accordingly.
