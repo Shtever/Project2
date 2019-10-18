@@ -31,7 +31,7 @@
 - displays list of candy being given out in that neighborhood
 
 
-![Image description](/Sketches/Site3.jpg)
+![Image description](/Sketches/site3.jpg)
 
      
 
