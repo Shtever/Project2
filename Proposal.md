@@ -21,6 +21,7 @@ Trick or tracker is a web app that allows you to submit what kind of candy you p
 ## API's to be used ##
 - IP Data API - Takes user IP address and returns latitude/longitude.
 - Google Geolocation - Takes latitude/longitude and returns information about nearby neighborhoods.
+- MapBox API - Renders a map on the webpage based on the neighborhood name returned by Geolocation API.
 
 
 
