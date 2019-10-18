@@ -1,23 +1,32 @@
+// var path = require("path");
+
 var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Treat.findAll({}).then(function(dbTreats) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        treats: dbTreats
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
+  // Load treat page and pass in an example by id
+  app.get("/treat/:id", function(req, res) {
+    db.Treat.findOne({ where: { id: req.params.id } }).then(function(dbTreat) {
+      res.render("treat", {
+        treat: dbTreat
+      });
+    });
+  });
+
+  // Load Neigbhborhood page and pass in an example by id
+  app.get("/neighborhood/:id", function(req, res) {
+    db.Neighborhood.findOne({ where: { id: req.params.id } }).then(function(dbNeighbor) {
+      res.render("neighborhood", {
+        neighborhood: dbNeighbor
       });
     });
   });
