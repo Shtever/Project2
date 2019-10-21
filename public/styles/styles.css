@@ -3,12 +3,9 @@
   src: url(../fonts/MISFITS_.TTF)
 }
 
-html { 
-  background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@font-face{
+  font-family: "bloodlust";
+  src: url(../fonts/bloodlust.ttf)
 }
 
 body::before {
@@ -22,26 +19,37 @@ body::before {
   z-index: 100;
 }
 
-/* body {
-  background-image: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif");
-  background-repeat: no-repeat, repeat;
+body {
+  background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-} */
+}
 
 #navbar {
   background-color: #F57200;
 }
 
 #navbarSupportedContent {
-  margin-left: 70%;
+  margin-left: 65%;
+  font-family: "bloodlust";
+  font-size: 35px;
+  text-shadow: 3px 5px 10px #000;
 }
 
 #brand {
   font-family: "Misfits";
-  font-size: 30px;
-  text-shadow: 3px 5px 10px #000;
+  font-size: 40px;
+  text-shadow: 1px 3px 7px #000;
 }
 
 .list-group-item {
   line-height: 2.5;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%; 
 }
