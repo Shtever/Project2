@@ -10,16 +10,31 @@
 
     <div class="row">
       <div class="col-lg-4" style="text-align:center">
-        <h4>I'm giving out...</h4>
+        <h4>About you</h4>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-4">
         <form>
           <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="I'm giving out...">
+            <label>What candy are you giving out?</label>
+            <input type="text" class="form-control candy" id="newCandy" aria-describedby="emailHelp"
+              placeholder="Add a new candy">
+            {{!-- <br>
+            <select name="candy" class="candy" id="candyInput">
+              <option value="-">Or select an existing candy</option>
+            </select> --}}
+            <br>
+            {{!-- </br> --}}
+            <label>What neighborhood are you in?</label>
+            <input type="text" class="form-control neighbor" id="newNeighborhood" aria-describedby="emailHelp"
+              placeholder="Add a new neighborhood">
+            {{!-- <br>
+            <select name="neighborhood" class="neighbor" id="neighborhoodInput">
+              <option value="-">Or select an existing neighboorhood</option>
+            </select> --}}
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" id="sub-btn">Submit</button>
         </form>
       </div>
     </div>
@@ -44,3 +59,6 @@
 
   </div>
 </div>
+
+<script src="../public/js/homeowner.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
