@@ -3,4 +3,3 @@ CREATE DATABASE tricks_db;
 
 -- DROP DATABASE IF EXISTS tricks_db;
 -- CREATE DATABASE tricks_db;
-
