@@ -1,4 +1,4 @@
-// var path = require("path");
+var path = require("path");
 
 var db = require("../models");
 
@@ -12,22 +12,12 @@ module.exports = function(app) {
 
   // Load post page
   app.get("/homeowner", function(req, res) {
-    db.Treat.findAll({}).then(function(dbTreats) {
-      res.render("homeowner", {
-        msg: "treats!",
-        treats: dbTreats
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/homeowner.html"));
   });
 
   // Load search page
   app.get("/tot", function(req, res) {
-    db.Neighborhood.findAll({}).then(function(dbNeighbor) {
-      res.render("tot", {
-        msg: "neighborhoods!",
-        neighborhoods: dbNeighbor
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/tot.html"));
   });
 
   // Load treat page and pass in an example by id

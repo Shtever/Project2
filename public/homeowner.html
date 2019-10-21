@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homeowner</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container hidden">
+        <div class="row top-30">
+            <div class="col-md-2 col-sm-2">
+                <a class="btn btn-light" href="/home">Go Home</a>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <a class="btn btn-light" href="/tot">Trick or Treat</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form id="newPost">
+                    <div class="form-group">
+                        <label>What candy are you giving out?</label>
+                        <input type="text" class="form-control candy" id="newCandy" aria-describedby="emailHelp"
+                            placeholder="Add a new candy">
+                        <div class="form-group">
+                            <label for="category">Select candy:</label>
+                            <select class="custom-select candy" id="candyInput">
+                            </select>
+                        </div>
+                        <br />
+                        <label>What neighborhood are you in?</label>
+                        <input type="text" class="form-control neighbor" id="newNeighborhood"
+                            aria-describedby="emailHelp" placeholder="Add a new neighborhood">
+                        <div class="form-group">
+                            <label for="category">Select neighboorhood:</label>
+                            <select class="custom-select neighbor" id="neighboorhoodInput">
+                            </select>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-success submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Custom Script -->
+    <script src="js/homeowner.js" type="text/javascript"></script>
+
+</body>
+
+</html>
