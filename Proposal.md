@@ -6,6 +6,10 @@
 - William Lukas
 - Steve McMillen
 
+## Description:  ##
+Trick or tracker is a web app that allows you to submit what kind of candy you plan on giving out this Halloween, giving participants an easy way to plan which houses they want to stop by, and allowing candy givers to scope out the competition.
+
+
 ## Sketch of design ##
 
 ### Home Page ###
@@ -17,6 +21,7 @@
 ## API's to be used ##
 - IP Data API - Takes user IP address and returns latitude/longitude.
 - Google Geolocation - Takes latitude/longitude and returns information about nearby neighborhoods.
+- MapBox API - Renders a map on the webpage based on the neighborhood name returned by Geolocation API.
 
 
 
@@ -31,7 +36,7 @@
 - displays list of candy being given out in that neighborhood
 
 
-![Image description](/Sketches/Site3.jpg)
+![Image description](/Sketches/site3.jpg)
 
      
 
@@ -47,7 +52,3 @@
 
 
 ### The user can then view the candy tht will be given out in their neighborhood, and can plan their trick or treat routes accordingly.
-
-
-## Description:  ##
-Trick or tracker is a web app that allows you to submit what kind of candy you plan on giving out this Halloween, giving participants an easy way to plan which houses they want to stop by, and allowing candy givers to scope out the competition.
