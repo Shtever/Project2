@@ -3,6 +3,14 @@
   src: url(../fonts/MISFITS_.TTF)
 }
 
+html { 
+  background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -13,6 +21,12 @@ body::before {
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
+
+/* body {
+  background-image: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+} */
 
 #navbar {
   background-color: #F57200;
