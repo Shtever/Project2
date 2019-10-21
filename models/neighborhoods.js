@@ -7,8 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   Neighborhood.associate = function(models) {
-    // Associating Neighborhood with Posts
-    // When an Neighborhood is deleted, also delete any associated Posts
+    // Associating Neighborhood with Treats
+    // When an Neighborhood is deleted, also delete any associated Treats
     Neighborhood.hasMany(models.Treat, {
       onDelete: "cascade"
     });
