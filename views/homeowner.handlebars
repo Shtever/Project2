@@ -1,0 +1,64 @@
+<div id="homeowner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12" style="text-align:center">
+        <h1>
+          Giving out candy
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" style="text-align:center">
+        <h4>About you</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <form>
+          <div class="form-group">
+            <label>What candy are you giving out?</label>
+            <input type="text" class="form-control candy" id="newCandy" aria-describedby="emailHelp"
+              placeholder="Add a new candy">
+            {{!-- <br>
+            <select name="candy" class="candy" id="candyInput">
+              <option value="-">Or select an existing candy</option>
+            </select> --}}
+            <br>
+            {{!-- </br> --}}
+            <label>What neighborhood are you in?</label>
+            <input type="text" class="form-control neighbor" id="newNeighborhood" aria-describedby="emailHelp"
+              placeholder="Add a new neighborhood">
+            {{!-- <br>
+            <select name="neighborhood" class="neighbor" id="neighborhoodInput">
+              <option value="-">Or select an existing neighboorhood</option>
+            </select> --}}
+          </div>
+          <button type="submit" class="btn btn-primary" id="sub-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <ul style="text-align:center" id="candy-list">
+          <li>Skittles</li>
+          <li>Candy Corn</li>
+          <li>Razor Blades</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4"></div>
+
+      <div class="col-lg-4">
+        {{!-- map goes here --}}
+        <h1>MAP</h1>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="../public/js/homeowner.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
