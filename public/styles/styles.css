@@ -1,3 +1,15 @@
-.list-group-item {
-  line-height: 2.5;
+.list-group-item {
+  line-height: 2.5;
+}
+
+#header {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#logo {
+  height: 20vw;
+  margin-top: 1%;
+  text-align: center;
 }
