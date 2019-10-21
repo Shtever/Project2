@@ -8,6 +8,11 @@
   src: url(../fonts/bloodlust.ttf)
 }
 
+@font-face {
+  font-family: "heartless";
+  src: url(../fonts/Heartless.ttf)
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -52,4 +57,11 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20%; 
+}
+
+footer {
+  font-size: 18px;
+  color: white;
+  font-family: "heartless";
+  text-align: center;
 }
