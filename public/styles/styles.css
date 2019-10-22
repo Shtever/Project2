@@ -1,9 +1,9 @@
-@font-face{ 
+@font-face {
   font-family: "Misfits";
   src: url(../fonts/MISFITS_.TTF)
 }
 
-@font-face{
+@font-face {
   font-family: "bloodlust";
   src: url(../fonts/bloodlust.ttf)
 }
@@ -39,7 +39,7 @@ body::before {
 }
 
 body {
-  background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed; 
+  background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -89,6 +89,7 @@ body {
   margin-left: 25%;
   margin-top: 10%;
 }
+
 /* footer {
   font-size: 18px;
   color: white;
@@ -100,8 +101,8 @@ body {
 button {
   font-family: "nightmare";
   font-size: 60px;
-  background: rgba(0, 0, 0, 0.5);
-  width: 200px;
+  /* background: rgba(0, 0, 0, 0.5); */
+  width: 400px;
   color: white;
 }
 
@@ -113,7 +114,34 @@ button {
   font-family: "skull_and_void";
   color: #F57200;
   font-size: 20px;
-  
   text-align: center;
   padding: 5%;
+}
+
+
+.enter {
+  position: relative;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  font-size: 5em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+
+  100% {
+    background-position: 500%;
+  }
 }
