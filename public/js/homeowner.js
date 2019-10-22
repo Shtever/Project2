@@ -39,7 +39,13 @@ $(document).ready(function () {
     console.log(newPost);
     $.post("/api/treats", newPost, function () {
       window.location.href = "/homeowner";
-      console.log("posted!");
+      console.log("posted treat!");
+    });
+    newHood = {
+      neighborhood: neighborhoodAdd
+    };
+    $.post("/api/neighborhoods", newHood, function(){
+      console.log("posted neightborhood!");
     });
   }
 });
