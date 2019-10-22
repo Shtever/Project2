@@ -1,21 +1,21 @@
 $(document).ready(function () {
   // initializing variables
   $("#sub-btn").on("click", function(event){
-    event.preventDefault()
+    event.preventDefault();
     add(event);
   });
 
   function add(event) {
-    var newCandy = $("#newCandy").text();
-    var existingCandy = $("#candyInput").text();
+    event.preventDefault();
+    var newCandy = $("#newCandy").val();
+    var existingCandy = $("#candyInput").val();
     var candyAdd;
-    var newNeighborhood = $("#newNeighborhood").text();
-    var existingNeighborhood = $("#neighborhoodInput").text();
+    var newNeighborhood = $("#newNeighborhood").val();
+    var existingNeighborhood = $("#neighborhoodInput").val();
     var neighborhoodAdd;
 
     console.log(newCandy);
     console.log(newNeighborhood);
-    event.preventDefault;
     if (!newCandy) {
       candyAdd = existingCandy;
       console.log(candyAdd);
