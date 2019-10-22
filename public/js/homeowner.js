@@ -13,6 +13,7 @@ $(document).ready(function () {
     var newNeighborhood = $("#newNeighborhood").val();
     var existingNeighborhood = $("#neighborhoodInput").val();
     var neighborhoodAdd;
+    var addressAdd = $("#newAddress").val();
 
     if (!newCandy) {
       candyAdd = existingCandy;
@@ -32,6 +33,7 @@ $(document).ready(function () {
 
     newPost = {
       candy: candyAdd,
+      address: addressAdd,
       neighborhood: neighborhoodAdd
     };
     console.log(newPost);
