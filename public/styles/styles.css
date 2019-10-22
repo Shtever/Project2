@@ -35,7 +35,7 @@ body::before {
 }
 
 #homeowner {
-  background: black;
+  background: #000000;
 }
 
 body {
@@ -47,15 +47,21 @@ body {
 }
 
 #navbar {
-  /* background-color: rgb(245, 114, 0, 0.4); */
+  background-color: rgb(245, 114, 0, 0.4);
   height: 65px;
 }
 
 #navbarSupportedContent {
-  margin-left: 65%;
+  margin-left: 75%;
   font-family: "bloodlust";
   font-size: 35px;
   text-shadow: 3px 5px 10px #000;
+}
+
+#navbarLogo {
+  margin-left: 10%;
+  height:50px;
+  width: 100px;
 }
 
 #brand {
@@ -87,6 +93,13 @@ body {
   height: 300px;
   width: 500px;
   margin-left: 25%;
+  margin-top: 10%;
+}
+
+#enterButton {
+  text-align: center;
+  font-size: 120px;
+  margin-left: 38%;
   margin-top: 10%;
 }
 
