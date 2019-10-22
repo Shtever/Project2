@@ -14,8 +14,6 @@ $(document).ready(function () {
     var existingNeighborhood = $("#neighborhoodInput").val();
     var neighborhoodAdd;
 
-    console.log(newCandy);
-    console.log(newNeighborhood);
     if (!newCandy) {
       candyAdd = existingCandy;
       console.log(candyAdd);
@@ -38,7 +36,7 @@ $(document).ready(function () {
     };
     console.log(newPost);
     $.post("/api/treats", newPost, function () {
-      // window.location.href = "/homeowner";
+      window.location.href = "/homeowner";
       console.log("posted!");
     });
   }
