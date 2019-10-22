@@ -26,7 +26,7 @@ require("./routes/neighborhoods-api-routes")(app);
 require("./routes/treats-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
