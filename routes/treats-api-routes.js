@@ -19,7 +19,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.Treat]
+      include: [db.Neighborhood]
     }).then(function(dbNeighbor) {
       res.json(dbNeighbor);
     });
@@ -27,7 +27,8 @@ module.exports = function(app) {
 
   // Create a new treat
   app.post("/api/treats", function(req, res) {
-    db.Treat.create(req.body).then(function(dbTreat) {
+    console.log(req.body);  
+    db.Treat.create(req.body, {include:db.Neighborhood}).then(function(dbTreat) {
       res.json(dbTreat);
     });
   });
