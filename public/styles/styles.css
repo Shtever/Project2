@@ -76,3 +76,7 @@
       margin-top: 1%;
       text-align: center;
     }
+
+    #map {
+      height: 100%;
+    }
