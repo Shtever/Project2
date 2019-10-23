@@ -1,78 +1,199 @@
-@font-face{ 
-    font-family: "Misfits";
-    src: url(../fonts/MISFITS_.TTF)
-  }
-  
-  @font-face{
-    font-family: "bloodlust";
-    src: url(../fonts/bloodlust.ttf)
-  }
-  
-  @font-face {
-    font-family: "heartless";
-    src: url(../fonts/Heartless.ttf)
-  }
-  
-  body::before {
-    content: "";
-    position: fixed;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
-    z-index: 100;
-  }
-  
-  body {
-    background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  
-  #navbar {
-    background-color: #F57200;
-  }
-  
-  #navbarSupportedContent {
-    margin-left: 65%;
-    font-family: "bloodlust";
-    font-size: 35px;
-    text-shadow: 3px 5px 10px #000;
-  }
-  
-  #brand {
-    font-family: "Misfits";
-    font-size: 40px;
-    text-shadow: 1px 3px 7px #000;
-  }
-  
-  .list-group-item {line-height: 2.5;
-  }	
-  
-  #buttonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 20%; 
-  }
-  
-  footer {
-    font-size: 18px;
-    color: white;
-    font-family: "heartless";
-    text-align: center;
-  }
+@font-face {
+  font-family: "Misfits";
+  src: url(../fonts/MISFITS_.TTF)
+}
 
-  #header {
-      width: 75%;
-      text-align: center;
-      margin: 0 auto;
-    }
-    
-    #logo {
-      height: 20vw;
-      margin-top: 1%;
-      text-align: center;
-    }
+@font-face {
+  font-family: "bloodlust";
+  src: url(../fonts/bloodlust.ttf)
+}
+
+@font-face {
+  font-family: "heartless";
+  src: url(../fonts/Heartless.ttf)
+}
+
+@font-face {
+  font-family: "nightmare";
+  src: url(../fonts/CFNightmarePERSONAL-Regular.ttf)
+}
+
+@font-face {
+  font-family: "skull_and_void";
+  src: url(../fonts/Skull\ and\ Void.otf)
+}
+
+@font-face {
+  font-family: "shaun";
+  src: url(../fonts/Shaun\ of\ the\ Dead.ttf)
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+#homeowner {
+  background: #000000;
+}
+
+#totPage {
+  background: #000000;
+  font-family: "skull_and_void";
+  color: #F57200;
+}
+
+body {
+  background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#navbar {
+  background-color: rgb(245, 114, 0, 0.8);
+  height: 65px;
+}
+
+#navbarSupportedContent {
+  margin-left: 75%;
+  font-family: "bloodlust";
+  font-size: 35px;
+  text-shadow: 3px 5px 10px #000;
+}
+
+#navbarLogo {
+  margin-left: 10%;
+  height:50px;
+  width: 100px;
+}
+
+#brand {
+  font-family: "Misfits";
+  font-size: 40px;
+  text-shadow: 1px 3px 7px #000;
+  color: #F57200;
+}
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+li {
+  color: red;
+  font-size: 3vw;
+}
+
+#homeownerTitle {
+  font-family: "shaun";
+  font-size: 120px;
+  color: #F57200;
+  text-align: center;
+  padding-top: 5%;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+
+#logo {
+  text-align: center;
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;;
+  margin-top: 2%;
+}
+
+#enterButton {
+  text-align: center;
+  font-size: 120px;
+  margin-left: 38%;
+  margin-top: 2%;
+}
+
+/* footer {
+  font-size: 18px;
+  color: white;
+  font-family: "heartless";
+  text-align: center;
+} */
+
+
+button {
+  font-family: "nightmare";
+  font-size: 60px;
+  /* background: rgba(0, 0, 0, 0.5); */
+  width: 400px;
+  color: white;
+}
+
+#sub-btn {
+  background: #F57200;
+  border: none;
+}
+
+#formContainer {
+  font-family: "skull_and_void";
+  color: #F57200;
+  font-size: 20px;
+  text-align: center;
+  padding: 3%;
+}
+
+
+.enter {
+  position: relative;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  font-size: 5em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.mapboxgl-ctrl {
+  visibility: hidden !important;
+}
+
+#map {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 32vw;
+}
+
+#logo1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#totInfo {
+  box-sizing: border-box;
+  height: fit-content;
+}
