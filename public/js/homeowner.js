@@ -1,4 +1,39 @@
 $(document).ready(function () {
+  function populateTreats () {
+    $.get("/api/treats", function (data) {
+      for (i in data) {
+        $("#candyInput").append(
+          $(
+            "<option value='" +
+              data[i].candy +
+              "'>" +
+              data[i].candy +
+              "</option>"
+          )
+        );
+      }
+    });
+  }
+  populateTreats();
+
+  function populateNeighborhoods () {
+    $.get("/api/treats", function (data) {
+      for (i in data) {
+        $("#neighborhoodInput").append(
+          $(
+            "<option value='" +
+              data[i].neighborhood +
+              "'>" +
+              data[i].neighborhood +
+              "</option>"
+          )
+        );
+      }
+    });
+  }
+
+  populateNeighborhoods();
+
   // initializing variables
   $("#sub-btn").on("click", function (event) {
     event.preventDefault();
