@@ -1,4 +1,47 @@
 $(document).ready(function () {
+  function populateTreats () {
+    var treats = [];
+    $.get("/api/treats", function (data) {
+      for (i in data) {
+        if (treats.includes(data[i].candy) !== true) {
+          $("#candyInput").append(
+            $(
+              "<option value='" +
+                data[i].candy +
+                "'>" +
+                data[i].candy +
+                "</option>"
+            )
+          );
+          treats.push(data[i].candy);
+        }
+      }
+    });
+  }
+  populateTreats();
+
+  function populateNeighborhoods () {
+    $.get("/api/treats", function (data) {
+      var hoods = [];
+      for (i in data) {
+        if (hoods.includes(data[i].neighborhood) !== true) {
+          $("#neighborhoodInput").append(
+            $(
+              "<option value='" +
+                data[i].neighborhood +
+                "'>" +
+                data[i].neighborhood +
+                "</option>"
+            )
+          );
+          hoods.push(data[i].neighborhood);
+        }
+      }
+    });
+  }
+
+  populateNeighborhoods();
+
   // initializing variables
   $("#sub-btn").on("click", function (event) {
     event.preventDefault();
@@ -44,7 +87,7 @@ $(document).ready(function () {
       };
       console.log(newPost);
       $.post("/api/treats", newPost, function () {
-        // window.location.href = "/homeowner";
+        window.location.href = "/homeowner";
         console.log("posted treat!");
       });
     });
