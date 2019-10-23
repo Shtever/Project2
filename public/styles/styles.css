@@ -63,7 +63,8 @@ body {
 }
 
 #navbarSupportedContent {
-  margin-left: 75%;
+  float: right;
+  margin-left: 40%;
   font-family: "bloodlust";
   font-size: 35px;
   text-shadow: 3px 5px 10px #000;
@@ -96,7 +97,19 @@ li {
   font-size: 120px;
   color: #F57200;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2%;
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+#totTitle {
+  font-family: "shaun";
+  font-size: 120px;
+  color: #F57200;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 0;
+  line-height: 1;
 }
 
 #buttonContainer {
