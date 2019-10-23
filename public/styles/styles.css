@@ -91,7 +91,7 @@ body {
 #buttonContainer {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 #logo {
@@ -126,6 +126,7 @@ button {
 
 #sub-btn {
   background: #F57200;
+  border: none;
 }
 
 #formContainer {
@@ -133,7 +134,7 @@ button {
   color: #F57200;
   font-size: 20px;
   text-align: center;
-  padding: 5%;
+  padding: 3%;
 }
 
 
