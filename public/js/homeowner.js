@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // initializing variables
-  $("#sub-btn").on("click", function(event){
+  $("#sub-btn").on("click", function (event) {
     event.preventDefault();
     add(event);
   });
@@ -13,6 +13,7 @@ $(document).ready(function () {
     var newNeighborhood = $("#newNeighborhood").val();
     var existingNeighborhood = $("#neighborhoodInput").val();
     var neighborhoodAdd;
+    var addressAdd = $("#newAddress").val();
 
     if (!newCandy) {
       candyAdd = existingCandy;
@@ -29,15 +30,23 @@ $(document).ready(function () {
       neighborhoodAdd = newNeighborhood;
       console.log(neighborhoodAdd);
     }
-
-    newPost = {
-      candy: candyAdd,
+    newHood = {
       neighborhood: neighborhoodAdd
     };
-    console.log(newPost);
-    $.post("/api/treats", newPost, function () {
-      window.location.href = "/homeowner";
-      console.log("posted!");
+    $.post("/api/neighborhoods", newHood, function () {
+      console.log("posted neighborhood!");
+    }).then(function (data) {
+      newPost = {
+        candy: candyAdd,
+        address: addressAdd,
+        neighborhood: neighborhoodAdd,
+        NeighborhoodId: data.id
+      };
+      console.log(newPost);
+      $.post("/api/treats", newPost, function () {
+        // window.location.href = "/homeowner";
+        console.log("posted treat!");
+      });
     });
   }
 });
