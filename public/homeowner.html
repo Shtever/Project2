@@ -9,6 +9,9 @@
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
     <!-- FONT AWESOME -->
@@ -42,6 +45,7 @@
     <h1 id="homeownerTitle">cAnDy gIVeRS</h1>
     <div class="container hidden" id="formContainer">
         <!-- <div class="row top-30">
+
             <div class="col-md-2 col-sm-2">
                 <a class="btn btn-light" href="/home">Go Home</a>
             </div>
@@ -50,7 +54,7 @@
             </div>
         </div> -->
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-5">
                 <form id="newPost">
                     <div class="form-group">
                         <label>What candy are you giving out?</label>
@@ -74,6 +78,7 @@
 
                         <button type="submit" id="sub-btn" class="btn btn-success submit"> SUBMIT </button>
 
+
                         <!-- <label>What's your address?</label>
                         <input type="text" class="form-control address" id="newAddress"
                             aria-describedby="emailHelp" placeholder="Add an address">
@@ -82,11 +87,16 @@
                         <br />
                         <button type="submit" id="sub-btn" class="btn btn-success submit">Submit</button> -->
 
+
                     </div>
                 </form>
             </div>
+            <div class="col-md-7" div id='map'></div>
         </div>
+
     </div>
+      
+    <script src="js/app.js" type="text/javascript"></script>
     <!-- Custom Script -->
     <script src="js/homeowner.js" type="text/javascript"></script>
 
