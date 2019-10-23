@@ -1,11 +1,8 @@
 /* eslint-disable indent */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable prettier/prettier */
-jQuery.ajaxPrefilter(function (options) {
-    if (options.crossDomain && jQuery.support.cors) {
-        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-    }
-});
+
+
 
 start();
 
@@ -22,21 +19,34 @@ function start() {
         console.log("User IP");
         console.log("Latitude: " + apiLat);
         console.log("Longitude: " + apiLong);
-        
+
         // initMap();
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/shtevetm/ck22m86cxexwf1cqrbhj27e98',
+            center: [apiLong, apiLat], // starting position [lng, lat]
+            zoom: 13 // starting zoom
+        });
 
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: apiLat, lng: apiLong },
-                zoom: 10
-            });
-        }
+        jQuery.ajaxPrefilter(function (options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+            }
+        });
+
+        // var map;
+        // function initMap() {
+        //     map = new google.maps.Map(document.getElementById('map'), {
+        //         center: { lat: apiLat, lng: apiLong },
+        //         zoom: 10
+        //     });
+        // }
 
 
 
 
-        
+
         // Ajax call to take lat/long and return address info
         // var queryURL2 = "https://maps.googleapis.com/maps/api/js?latlng=" + apiLat + "," + apiLong + "&key=AIzaSyCrdiVhj7Un_ACNVqMw9dozHxGNVglpwmo";
         // $.ajax({

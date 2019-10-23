@@ -54,7 +54,7 @@
             </div>
         </div> -->
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-5">
                 <form id="newPost">
                     <div class="form-group">
                         <label>What candy are you giving out?</label>
@@ -89,19 +89,11 @@
                     </div>
                 </form>
             </div>
+            <div class="col-md-7" div id='map'></div>
         </div>
+
     </div>
       
-    <div id='map'></div>
-    <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
-            var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-74.50, 40], // starting position [lng, lat]
-            zoom: 9 // starting zoom
-            });
-            </script>
     <script src="js/app.js" type="text/javascript"></script>
     <!-- Custom Script -->
     <script src="js/homeowner.js" type="text/javascript"></script>
