@@ -7,7 +7,6 @@ jQuery.ajaxPrefilter(function (options) {
     }
 });
 
-
 start();
 
 function start() {
@@ -23,7 +22,8 @@ function start() {
         console.log("User IP");
         console.log("Latitude: " + apiLat);
         console.log("Longitude: " + apiLong);
-        initMap();
+        
+        // initMap();
 
         var map;
         function initMap() {
@@ -32,7 +32,6 @@ function start() {
                 zoom: 10
             });
         }
-
 
 
 

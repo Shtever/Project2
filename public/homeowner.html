@@ -9,13 +9,22 @@
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
-    <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrdiVhj7Un_ACNVqMw9dozHxGNVglpwmo&callback=initMap" async
-        defer></script>
-        <script src="js/app.js" type="text/javascript"></script>
+    <div id='map'></div>
+    <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-74.50, 40], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+            });
+            </script>
+    <script src="js/app.js" type="text/javascript"></script>
 
     <div class="container hidden">
         <div class="row top-30">
