@@ -1,16 +1,20 @@
 $(document).ready(function() {
   function populateTreats () {
+    var treats = [];
     $.get("/api/treats", function (data) {
       for (i in data) {
-        $("#candyInput").append(
-          $(
-            "<option value='" +
-              data[i].candy +
-              "'>" +
-              data[i].candy +
-              "</option>"
-          )
-        );
+        if (treats.includes(data[i].candy) !== true) {
+          $("#candyInput").append(
+            $(
+              "<option value='" +
+                data[i].candy +
+                "'>" +
+                data[i].candy +
+                "</option>"
+            )
+          );
+          treats.push(data[i].candy);
+        }
       }
     });
   }
@@ -18,16 +22,20 @@ $(document).ready(function() {
 
   function populateNeighborhoods () {
     $.get("/api/treats", function (data) {
+      var hoods = [];
       for (i in data) {
-        $("#neighborhoodInput").append(
-          $(
-            "<option value='" +
-              data[i].neighborhood +
-              "'>" +
-              data[i].neighborhood +
-              "</option>"
-          )
-        );
+        if (hoods.includes(data[i].neighborhood) !== true) {
+          $("#neighborhoodInput").append(
+            $(
+              "<option value='" +
+                data[i].neighborhood +
+                "'>" +
+                data[i].neighborhood +
+                "</option>"
+            )
+          );
+          hoods.push(data[i].neighborhood);
+        }
       }
     });
   }
@@ -60,7 +68,7 @@ $(document).ready(function() {
 
                     if (data[i].neighborhood === hood.neighborhood) {
                         var selection = data[i].candy;
-                        $("#addHere").html("candy", selection + "<br></br>");
+                        $("#addHere").after("candy: " + selection + "<br></br>");
                     } else {
                         $("#addHere").html("that neighborhood doesnt exist yet")
                     }
@@ -75,7 +83,7 @@ $(document).ready(function() {
 
                     if (data[i].candy === cand.candy) {
                         var selection = data[i].neighborhood;
-                        $("#addHere").html("neighborhood", selection + "<br></br>");
+                        $("#addHere").after("neighborhood: " + selection + "<br></br>");
                     } else {
                         $("#addHere").html("that candy doesnt exist yet")
                     }
