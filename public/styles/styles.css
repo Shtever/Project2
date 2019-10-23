@@ -210,3 +210,26 @@ button {
   box-sizing: border-box;
   height: fit-content;
 }
+
+#about {
+  text-align: center;
+}
+
+#aboutTitle {  
+  font-family: "shaun";
+  font-size: 120px;
+  color: #F57200;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+#aboutTxt {
+  color: yellow;
+  font-size: 3vw;
+  text-align: justify;
+  padding: 5%;
+  padding-top: 0;
+  font-family: "bloodlust";
+}
