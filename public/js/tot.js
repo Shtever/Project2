@@ -103,10 +103,13 @@ $(document).ready(function() {
                         var selection1 = data[i].candy;
                         var selection2 = data[i].neighborhood;
                         // $("#candy-list").append($("<li>" + selection + "</li>"));
-                        $("#addHere").html($('<h3 id="addHere">There are ' + selection1 + ' in ' + selection2 + ' </h3>'))
+                        $("#addHere").html($('<h3 id="addHere">There are ' + candySearch + ' in ' + neighborhoodSearch + ' </h3>'))
                     } 
-                    else {
-                        $("#addHere").html($('<h3 id="addHere">There not are ' + selection1 + ' in ' + selection2 + ' </h3>'))
+                    else if ((data[i].candy !== cand.candy) && (data[i].neighborhood === hood.neighborhood) ){
+                        $("#addHere").html($('<h3 id="addHere">There are not ' + candySearch + ' in ' + neighborhoodSearch + ' </h3>'))
+                    }
+                    else if ((data[i].candy === cand.candy) && (data[i].neighborhood !== hood.neighborhood) ){
+                        $("#addHere").html($('<h3 id="addHere">There are not ' + candySearch + ' in ' + neighborhoodSearch + ' </h3>'))
                     }
                 }
             });
