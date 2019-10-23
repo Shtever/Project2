@@ -8,7 +8,7 @@ start();
 
 function start() {
     var queryURL =
-        "https://api.ipdata.co?api-key=f754718a6a805ba8f15448bac5bf5e48e82b8c6b7b923fe91c9381eb";
+        "https://api.ipdata.co/?api-key=725b995622aa411b7cb5686057f3295744cb3b2f561ed730abde434e";
     // Ajax call for lat/long based on user IP address //
     $.ajax({
         url: queryURL,
@@ -21,7 +21,7 @@ function start() {
         console.log("Longitude: " + apiLong);
 
         // initMap();
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2syM2V5c2huMHdiazNmcWMzbHd3ZXl5ZiJ9.rnLws1iCGFFsUGsted9fRw';
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/shtevetm/ck22m86cxexwf1cqrbhj27e98',
