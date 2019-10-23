@@ -23,6 +23,11 @@
   src: url(../fonts/Skull\ and\ Void.otf)
 }
 
+@font-face {
+  font-family: "shaun";
+  src: url(../fonts/Shaun\ of\ the\ Dead.ttf)
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -47,7 +52,7 @@ body {
 }
 
 #navbar {
-  background-color: rgb(245, 114, 0, 0.4);
+  background-color: rgb(245, 114, 0, 0.8);
   height: 65px;
 }
 
@@ -76,11 +81,11 @@ body {
 }
 
 #homeownerTitle {
-  font-family: "skull_and_void";
+  font-family: "shaun";
+  font-size: 120px;
   color: #F57200;
   text-align: center;
   padding-top: 5%;
-  font-weight: bold;
 }
 
 #buttonContainer {
@@ -122,6 +127,7 @@ button {
 
 #sub-btn {
   background: #F57200;
+  border: none;
 }
 
 #formContainer {
@@ -129,7 +135,7 @@ button {
   color: #F57200;
   font-size: 20px;
   text-align: center;
-  padding: 5%;
+  padding: 3%;
 }
 
 
