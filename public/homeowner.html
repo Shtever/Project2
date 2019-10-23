@@ -9,6 +9,9 @@
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
     <!-- FONT AWESOME -->
@@ -42,6 +45,7 @@
     <h1 id="homeownerTitle">Home Owner Form</h1>
     <div class="container hidden" id="formContainer">
         <!-- <div class="row top-30">
+
             <div class="col-md-2 col-sm-2">
                 <a class="btn btn-light" href="/home">Go Home</a>
             </div>
@@ -75,8 +79,8 @@
                         <button type="submit" id="sub-btn" class="btn btn-success submit"> SUBMIT </button>
 
                         <label>What's your address?</label>
-                        <input type="text" class="form-control address" id="newAddress"
-                            aria-describedby="emailHelp" placeholder="Add an address">
+                        <input type="text" class="form-control address" id="newAddress" aria-describedby="emailHelp"
+                            placeholder="Add an address">
                         <div class="form-group">
                         </div>
                         <br />
@@ -87,6 +91,18 @@
             </div>
         </div>
     </div>
+      
+    <div id='map'></div>
+    <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-74.50, 40], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+            });
+            </script>
+    <script src="js/app.js" type="text/javascript"></script>
     <!-- Custom Script -->
     <script src="js/homeowner.js" type="text/javascript"></script>
 
