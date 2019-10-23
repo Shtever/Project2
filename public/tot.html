@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="./styles/styles.css">
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
+<body id="totPage">
     <div id="tot">
         <div class="container">
             <div class="row">
@@ -23,16 +29,16 @@
                     </h1>
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col-lg-12" style="text-align:center">
                     <h3>Here's what's being given out in your Neighborhood</h3>
                 </div>
             </div>
-    
+
             <br>
-    
-            <div class="row">
+
+            <div class="row" id="totInfo">
                 <div class="col-lg-4">
                     <ul id="candy-list">
                         <li>Skittles</li>
@@ -40,14 +46,14 @@
                         <li>Razor Blades</li>
                     </ul>
                 </div>
-    
                 <div class="col-md-7" div id='map'></div>
-                </div>
             </div>
-    
         </div>
+
+    </div>
     </div>
     <script src="js/app.js" type="text/javascript"></script>
 
 </body>
+
 </html>
