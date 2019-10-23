@@ -67,7 +67,7 @@ $(document).ready(function () {
                 for (i in data) {
                     // console.log(data[i].neighborhood, hood.neighborhood);
 
-                    if (data[i].neighborhood === hood.neighborhood) {
+                    if (data[i].neighborhood === hood.neighborhood && data[i].candy !== "nothing") {
                         var selection = data[i].candy;
                         $("#candy-list").append($("<li>" + selection + "</li>"));
                         $("#addHere").html($('<h3 id="addHere">available candies</h3>'))
@@ -84,7 +84,7 @@ $(document).ready(function () {
                 for (i in data) {
                     // console.log(data[i].candy, cand.candy);
 
-                    if (data[i].candy === cand.candy) {
+                    if (data[i].candy === cand.candy && data[i].neighborhood !== "nothing") {
                         var selection = data[i].neighborhood;
                         $("#candy-list").append($("<li>" + selection + "</li>"));
                         $("#addHere").html($('<h3 id="addHere">find your candy in these neighborhoods</h3>'))
@@ -105,11 +105,10 @@ $(document).ready(function () {
                         bunch.push(data[i]);
                         for (j in bunch) {
                             console.log(bunch[j])
-                            if (bunch[j].candy === candySearch) {
+                            if ((bunch[j].candy === candySearch) && (bunch[j].neighborhood !== "nothing")) {
                                 $("#addHere").html($('<h3 id="addHere">There are ' + candySearch + ' in ' + neighborhoodSearch + ' </h3>'))
                             }
                         }
-
                     }
                     else if ((data[i].candy !== cand.candy) && (data[i].neighborhood === hood.neighborhood)) {
                         $("#addHere").html($('<h3 id="addHere">There ain`t ' + candySearch + ' in ' + neighborhoodSearch + ' </h3>'))

@@ -3,7 +3,10 @@ $(document).ready(function () {
     var treats = [];
     $.get("/api/treats", function (data) {
       for (i in data) {
-        if (treats.includes(data[i].candy) !== true && data[i].neighborhood !== "nothing") {
+        if (
+          treats.includes(data[i].candy) !== true &&
+          data[i].neighborhood !== "nothing"
+        ) {
           $("#candyInput").append(
             $(
               "<option value='" +
@@ -24,7 +27,10 @@ $(document).ready(function () {
     $.get("/api/treats", function (data) {
       var hoods = [];
       for (i in data) {
-        if (hoods.includes(data[i].neighborhood) !== true && data[i].neighborhood !== "nothing") {
+        if (
+          hoods.includes(data[i].neighborhood) !== true &&
+          data[i].neighborhood !== "nothing"
+        ) {
           $("#neighborhoodInput").append(
             $(
               "<option value='" +
