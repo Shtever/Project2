@@ -27,13 +27,13 @@
 
 <body>
 
-    <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar">
+    <!-- <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar">
         <a class="navbar-brand" href="#" id="brand">Trick R Tracker <i class="fas fa-ghost"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -49,21 +49,30 @@
                 </li>
             </ul>
         </div>
-    </nav>
-
-    <div class="container" id="buttonContainer">
+    </nav> -->
+    <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <button >PARENTS</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <button>KIDS</button>
+            <div class="col-md-12">`
+                <img src="./images/ToTLogo1.png" alt="ToT Logo" id="logo">
             </div>
         </div>
     </div>
-<footer>FOOTER PLACEHOLDER</footer>
+
+    <div class="container" id="buttonContainer" style="display:none">
+        <div class="row">
+            <div class="col-md-3">
+                <button class="enter">PARENTS</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="enter">KIDS</button>
+            </div>
+        </div>
+    </div>
+    <button class="enter" id ="enterButton" style="display: block">ENTER...</button>
+
+    <script src="js/splash.js"></script>
 </body>
 
 </html>
