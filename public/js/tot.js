@@ -1,4 +1,46 @@
-$(document).ready(function () {
+$(document).ready(function() {
+  function populateTreats () {
+    var treats = [];
+    $.get("/api/treats", function (data) {
+      for (i in data) {
+        if (treats.includes(data[i].candy) !== true) {
+          $("#candyInput").append(
+            $(
+              "<option value='" +
+                data[i].candy +
+                "'>" +
+                data[i].candy +
+                "</option>"
+            )
+          );
+          treats.push(data[i].candy);
+        }
+      }
+    });
+  }
+  populateTreats();
+
+  function populateNeighborhoods () {
+    $.get("/api/treats", function (data) {
+      var hoods = [];
+      for (i in data) {
+        if (hoods.includes(data[i].neighborhood) !== true) {
+          $("#neighborhoodInput").append(
+            $(
+              "<option value='" +
+                data[i].neighborhood +
+                "'>" +
+                data[i].neighborhood +
+                "</option>"
+            )
+          );
+          hoods.push(data[i].neighborhood);
+        }
+      }
+    });
+  }
+
+  populateNeighborhoods();
     // initializing variables
     $("#sub-btn-kids").on("click", function (event) {
         event.preventDefault();
@@ -7,6 +49,7 @@ $(document).ready(function () {
 
     function look(event) {
         event.preventDefault();
+        $("#candy-list").empty();
         var candySearch = $("#candyInput").val();
         var neighborhoodSearch = $("#neighborhoodInput").val();
 
@@ -26,10 +69,12 @@ $(document).ready(function () {
 
                     if (data[i].neighborhood === hood.neighborhood) {
                         var selection = data[i].candy;
-                        $("#addHere").html("candy", selection + "<br></br>");
-                    } else {
-                        $("#addHere").html("that neighborhood doesnt exist yet")
-                    }
+                        $("#candy-list").append($("<li>" + selection + "</li>"));
+                        $("#addHere").html($('<h3 id="addHere">available candies</h3>'))
+                    } 
+                    // else {
+                    //     $("#addHere").html("that neighborhood doesnt exist yet")
+                    // }
                 }
             });
         }
@@ -41,10 +86,12 @@ $(document).ready(function () {
 
                     if (data[i].candy === cand.candy) {
                         var selection = data[i].neighborhood;
-                        $("#addHere").html("neighborhood", selection + "<br></br>");
-                    } else {
-                        $("#addHere").html("that candy doesnt exist yet")
-                    }
+                        $("#candy-list").append($("<li>" + selection + "</li>"));
+                        $("#addHere").html($('<h3 id="addHere">find your candy in these neighborhoods</h3>'))
+                    } 
+                    // else {
+                    //     $("#addHere").html("that candy doesnt exist yet")
+                    // }
                 }
             });
         }
