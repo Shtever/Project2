@@ -1,18 +1,16 @@
 /* eslint-disable indent */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable prettier/prettier */
-
 // jQuery.ajaxPrefilter(function (options) {
 //             if (options.crossDomain && jQuery.support.cors) {
 //                 options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
 //             }
 //         });
 
-start();
 
+start();
 function start() {
-    var queryURL =
-        "https://api.ipdata.co/?api-key=725b995622aa411b7cb5686057f3295744cb3b2f561ed730abde434e"
+    var queryURL = "https://api.ipdata.co/?api-key=725b995622aa411b7cb5686057f3295744cb3b2f561ed730abde434e"
 
     // Ajax call for lat/long based on user IP address //
     $.ajax({
