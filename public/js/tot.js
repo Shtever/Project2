@@ -61,7 +61,7 @@ $(document).ready(function() {
         };
         console.log(hood);
 
-        if (neighborhoodSearch !== "nothing") {
+        if ((neighborhoodSearch !== "nothing") && (candySearch === "nothing")) {
             $.get("/api/treats", function (data) {
                 console.log(data);
                 for (i in data) {
@@ -78,7 +78,7 @@ $(document).ready(function() {
                 }
             });
         }
-        if (candySearch !== "nothing") {
+        if ((candySearch !== "nothing") && (neighborhoodSearch === "nothing")) {
             $.get("/api/treats", function (data) {
                 console.log(data);
                 for (i in data) {
@@ -95,6 +95,21 @@ $(document).ready(function() {
                 }
             });
         }
-
+        if ((candySearch !== "nothing") && (neighborhoodSearch !== "nothing")) {
+            $.get("/api/treats", function (data) {
+                console.log(data);
+                for (i in data) {
+                    if ((data[i].candy === cand.candy) && (data[i].neighborhood === hood.neighborhood) ) {
+                        var selection1 = data[i].candy;
+                        var selection2 = data[i].neighborhood;
+                        // $("#candy-list").append($("<li>" + selection + "</li>"));
+                        $("#addHere").html($('<h3 id="addHere">There are ' + selection1 + ' in ' + selection2 + ' </h3>'))
+                    } 
+                    else {
+                        $("#addHere").html($('<h3 id="addHere">There not are ' + selection1 + ' in ' + selection2 + ' </h3>'))
+                    }
+                }
+            });
+        }
     }
 });
