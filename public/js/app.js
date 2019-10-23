@@ -2,7 +2,11 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable prettier/prettier */
 
-
+jQuery.ajaxPrefilter(function (options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+            }
+        });
 
 start();
 
@@ -29,11 +33,7 @@ function start() {
             zoom: 13 // starting zoom
         });
 
-        jQuery.ajaxPrefilter(function (options) {
-            if (options.crossDomain && jQuery.support.cors) {
-                options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-            }
-        });
+        
 
         // var map;
         // function initMap() {
