@@ -43,6 +43,12 @@ body::before {
   background: #000000;
 }
 
+#totPage {
+  background: #000000;
+  font-family: "skull_and_void";
+  color: #F57200;
+}
+
 body {
   background: url("https://media.giphy.com/media/W4JoqYVjqMIuc/giphy.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -78,6 +84,11 @@ body {
 
 .list-group-item {
   line-height: 2.5;
+}
+
+li {
+  color: red;
+  font-size: 3vw;
 }
 
 #homeownerTitle {
@@ -166,17 +177,23 @@ button {
 }
 
 .mapboxgl-ctrl {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 #map {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   overflow: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 32vw;
 }
 
 #logo1 {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+#totInfo {
+  box-sizing: border-box;
+  height: fit-content;
 }
