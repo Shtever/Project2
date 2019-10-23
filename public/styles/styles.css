@@ -86,21 +86,22 @@ body {
 #buttonContainer {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 #logo {
+  text-align: center;
   height: 300px;
   width: 500px;
-  margin-left: 25%;
-  margin-top: 10%;
+  margin: 0 auto;;
+  margin-top: 2%;
 }
 
 #enterButton {
   text-align: center;
   font-size: 120px;
   margin-left: 38%;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 /* footer {
@@ -166,4 +167,10 @@ button {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   overflow: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#logo1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
