@@ -9,32 +9,50 @@
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div id='map'></div>
-    <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
-            var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-74.50, 40], // starting position [lng, lat]
-            zoom: 9 // starting zoom
-            });
-            </script>
-    <script src="js/app.js" type="text/javascript"></script>
+<body id="homeowner">
+    <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar">
+        <a class="navbar-brand" href="#" id="brand"><img src="./images/ToTLogo1.png" alt="ToT Logo" id="navbarLogo"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/homeowner">Parents <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tot">Kids</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1 id="homeownerTitle">Home Owner Form</h1>
+    <div class="container hidden" id="formContainer">
+        <!-- <div class="row top-30">
 
-    <div class="container hidden">
-        <div class="row top-30">
             <div class="col-md-2 col-sm-2">
                 <a class="btn btn-light" href="/home">Go Home</a>
             </div>
             <div class="col-md-2 col-sm-2">
                 <a class="btn btn-light" href="/tot">Trick or Treat</a>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <form id="newPost">
@@ -57,6 +75,9 @@
                             </select>
                         </div>
                         <br />
+
+                        <button type="submit" id="sub-btn" class="btn btn-success submit"> SUBMIT </button>
+
                         <label>What's your address?</label>
                         <input type="text" class="form-control address" id="newAddress" aria-describedby="emailHelp"
                             placeholder="Add an address">
@@ -64,11 +85,24 @@
                         </div>
                         <br />
                         <button type="submit" id="sub-btn" class="btn btn-success submit">Submit</button>
+
                     </div>
                 </form>
             </div>
         </div>
     </div>
+      
+    <div id='map'></div>
+    <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoic2h0ZXZldG0iLCJhIjoiY2sxdjF6M2d4MTdzbzNiazFpZm5lYTlldiJ9.2IosVg-f5S9VlnO4q2NG7g';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-74.50, 40], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+            });
+            </script>
+    <script src="js/app.js" type="text/javascript"></script>
     <!-- Custom Script -->
     <script src="js/homeowner.js" type="text/javascript"></script>
 
